@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kevin Zambrano | Desarrollador Web</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container1">
+    <h1 class="logo">Kevin <span>Zambrano Dev</span></h1>
+
+    <!-- Botón hamburguesa -->
+    <button class="hamburger" id="hamburgerBtn">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav class="nav-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#inicio"><i class="fa-solid fa-house"></i> Inicio</a></li>
+        <li><a href="#sobre-mi"><i class="fa-solid fa-briefcase"></i> Servicios</a></li>
+        <li><a href="#portafolio"><i class="fa-solid fa-folder-open"></i> Proyectos</a></li>
+        <li><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <!-- SECCIÓN INICIO -->
+    <section id="inicio" class="hero fade-in">
+        <div class="hero-content">
+            <h2>¡Hola!</h2>
+            <h3>Soy <span>Kevin Zambrano</span></h3>
+            <p id="text">Intentando Desarrollar <span id="role"></span></p>
+            <button <i class="fa-solid fa-folder-open"></i> <a href="#portafolio">Portafolio</a></button>
+        </div>
+    </section>
+
+
+<section id="sobre-mi" class="about fade-in">
+  <div class="container2">
+    <h2 class="section-title">Sobre Mí</h2>
+    <p class="section-subtitle">Una breve descripción de mi persona en mi etapa profesional.</p>
+
+    <div class="about-grid">
+      <!-- INFORMACIÓN PERSONAL -->
+      <div class="info card-3d">
+        <h3><i class="fa-solid fa-user"></i> Información Personal</h3>
+        <div class="info-content">
+          <ul>
+            <li><i class="fa-solid fa-id-card"></i> <strong>Nombre:</strong> Kevin Zambrano</li>
+            <li><i class="fa-solid fa-laptop-code"></i> <strong>Perfil:</strong> Full Stack Developer</li>
+            <li><i class="fa-solid fa-envelope"></i> <strong>E-Mail:</strong>
+              <a href="mailto:slainer17@hotmail.com">slainer17@hotmail.com</a>
+            </li>
+            <li><i class="fa-solid fa-phone"></i> <strong>Teléfono:</strong> +624130325</li>
+          </ul>
+          <img class="kev-dev" src="./img/kevin.dev.png" alt="Kevin Zambrano">
+        </div>
+      </div>
+
+      <!-- HABILIDADES -->
+      <div class="skills card-3d">
+        <h3><i class="fa-solid fa-code"></i> Habilidades</h3>
+        <div class="skills-list">
+          <div class="skill">
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <div class="progress-bar"><div class="progress js"></div></div>
+          </div>
+
+          <div class="skill">
+            <span><i class="fa-brands fa-php"></i> JAVA</span>
+            <div class="progress-bar"><div class="progress php"></div></div>
+          </div>
+
+          <div class="skill">
+            <span><i class="fa-brands fa-angular"></i> Angular</span>
+            <div class="progress-bar"><div class="progress angular"></div></div>
+          </div>
+
+          <div class="skill">
+            <span><i class="fa-solid fa-database"></i> POSTGRESS</span>
+            <div class="progress-bar"><div class="progress sql"></div></div>
+          </div>
+
+          <div class="skill">
+            <span><i class="fa-brands fa-git-alt"></i> Git / REST / Testing</span>
+            <div class="progress-bar"><div class="progress git"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portafolio" class="portfolio fade-in">
+  <div class="container3">
+    <h2 class="section-title">Proyectos</h2>
+    <p class="section-subtitle">Explora algunos de los proyectos más destacados en los que he trabajado.</p>
+
+    <div class="projects">
+      <div class="project card-3d">
+        <img class="project-img" src="./img/app1.jpg" alt="Medic App">
+        <div class="project-content">
+          <h3>Medic App</h3>
+          <p>Aplicación móvil para gestión médica. <br><small>Feb 2020</small></p>
+          <a href="#" target="_blank" class="btn-small">Ver proyecto</a>
+        </div>
+      </div>
+
+      <div class="project card-3d">
+        <img class="project-img" src="./img/app2.avif" alt="RiegoTec">
+        <div class="project-content">
+          <h3>ClimaTec</h3>
+          <p>Plataforma web del control del clima. <br><small>Oct 2019</small></p>
+          <a href="#" target="_blank" class="btn-small">Ver proyecto</a>
+        </div>
+      </div>
+
+      <div class="project card-3d">
+        <img class="project-img" src="./img/app3.jpg" alt="PayPack">
+        <div class="project-content">
+          <h3>PayPack</h3>
+          <p>Solución de pagos online escalable. <br><small>Oct 2019</small></p>
+          <a href="#" target="_blank" class="btn-small">Ver proyecto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact fade-in">
+  <div class="container4">
+    <h2 class="section-title">Contacto</h2>
+    <p class="section-subtitle">¿Tienes un proyecto o idea? Estoy disponible para colaboraciones o nuevas oportunidades.</p>
+
+    <div class="contact-links">
+      <a href="mailto:slainer17@hotmail.com" class="btn-glow">Enviar Correo</a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/tuusuario" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:slainer17@hotmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Kevin Zambrano | Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>

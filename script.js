@@ -103,3 +103,12 @@ projectCards.forEach((card, i) => {
     card.style.transform = "translateY(0)";
   }, i * 200);
 });
+
+
+const hamburger = document.getElementById("hamburgerBtn");
+const menu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  hamburger.classList.toggle("active"); // anima hamburguesa a ✖
+});
