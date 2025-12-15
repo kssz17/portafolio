@@ -383,10 +383,15 @@ body {
   gap: 2rem;
 }
 
+.email {
+    color: #ffffff;       
+  text-decoration: none;
+}
 .info-content ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  
 }
 
 .info-content li {
@@ -396,6 +401,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  
 }
 
 .info-content i {
