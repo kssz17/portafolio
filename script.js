@@ -112,3 +112,54 @@ hamburger.addEventListener("click", () => {
   menu.classList.toggle("active");
   hamburger.classList.toggle("active"); // anima hamburguesa a ✖
 });
+
+function toggleFolder(header) {
+  // Cerrar otras carpetas (opcional - si quieres que solo una esté abierta)
+  const allFolders = document.querySelectorAll('.folder-card');
+  allFolders.forEach(folder => {
+    const wrapper = folder.querySelector('.projects-wrapper');
+    const headerEl = folder.querySelector('.folder-header');
+    if (folder !== header.closest('.folder-card')) {
+      wrapper.style.maxHeight = null;
+      headerEl.classList.remove('active');
+      // También rotar la flecha de vuelta
+      const arrow = headerEl.querySelector('.arrow');
+      if (arrow) arrow.style.transform = 'rotate(0deg)';
+    }
+  });
+
+  // Toggle la carpeta actual
+  const folder = header.closest('.folder-card');
+  const wrapper = folder.querySelector('.projects-wrapper');
+  const arrow = header.querySelector('.arrow');
+  
+  // Verificar si está abierto
+  const isOpen = wrapper.style.maxHeight && wrapper.style.maxHeight !== '0px' && wrapper.style.maxHeight !== '';
+  
+  if (isOpen) {
+    // Cerrar
+    wrapper.style.maxHeight = null;
+    header.classList.remove('active');
+    if (arrow) arrow.style.transform = 'rotate(0deg)';
+  } else {
+    // Abrir
+    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+    header.classList.add('active');
+    if (arrow) arrow.style.transform = 'rotate(180deg)';
+  }
+}
+
+// Inicializar todas las carpetas cerradas (opcional)
+document.addEventListener('DOMContentLoaded', function() {
+  const folders = document.querySelectorAll('.folder-card');
+  folders.forEach(folder => {
+    const wrapper = folder.querySelector('.projects-wrapper');
+    const header = folder.querySelector('.folder-header');
+    wrapper.style.maxHeight = null;
+    header.classList.remove('active');
+    
+    // Asegurar que las flechas apunten hacia abajo inicialmente
+    const arrow = header.querySelector('.arrow');
+    if (arrow) arrow.style.transform = 'rotate(0deg)';
+  });
+});
