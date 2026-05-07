@@ -9,6 +9,7 @@
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
 </head>
 
@@ -28,7 +29,7 @@
     <nav class="nav-menu" id="mobileMenu">
       <ul>
         <li><a href="#inicio"><i class="fa-solid fa-house"></i> Inicio</a></li>
-        <li><a href="#sobre-mi"><i class="fa-solid fa-briefcase"></i> Servicios</a></li>
+        <li><a href="#sobre-mi"><i class="fa-solid fa-user"></i> Sobre mí</a></li>
         <li><a href="#portafolio"><i class="fa-solid fa-folder-open"></i> Proyectos</a></li>
         <li><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
       </ul>
@@ -47,317 +48,542 @@
     </section>
 
 
-<section id="sobre-mi" class="about fade-in">
+<!-- SECCIÓN SOBRE MÍ -->
+<section id="sobre-mi" class="about section-fx">
   <div class="container2">
-    <h2 class="section-title">Sobre Mí</h2>
-    <p class="section-subtitle">Una breve descripción de mi persona en mi etapa profesional.</p>
 
-    <div class="about-grid">
-      <!-- INFORMACIÓN PERSONAL -->
-      <div class="info card-3d">
-        <h3><i class="fa-solid fa-user"></i> Información Personal</h3>
-        <div class="info-content">
-          <ul>
-            <li><i class="fa-solid fa-id-card"></i> <strong>Nombre:</strong> Kevin Zambrano</li>
-            <li><i class="fa-solid fa-laptop-code"></i> <strong>Perfil:</strong> Full Stack Developer</li>
-            <li><i class="fa-solid fa-envelope"></i> <strong>E-Mail:</strong>
-              <a class="email" href="mailto:slainer17@hotmail.com">slainer17@hotmail.com</a>
-            </li>
-            <li><i class="fa-solid fa-phone"></i> <strong>Teléfono:</strong> +624130325</li>
+    <div class="section-header reveal">
+      <h2 class="section-title">Sobre mí</h2>
+      <p class="section-subtitle">Desarrollador en formación, comprometido con el código limpio y construir productos que aporten valor real.</p>
+    </div>
+
+    <!-- HERO PERSONAL: foto + bio + datos + CTAs -->
+    <div class="profile-hero reveal">
+      <div class="profile-photo">
+        <div class="photo-frame">
+          <img src="./img/IMG_20230606_043315.jpg" alt="Kevin Zambrano">
+        </div>
+        <span class="status-pill">
+          <span class="status-dot"></span> Disponible
+        </span>
+      </div>
+
+      <div class="profile-content">
+        <span class="profile-eyebrow">Kevin Zambrano · Frontend Developer</span>
+        <h3 class="profile-headline">Construyo interfaces <span>limpias, accesibles y mantenibles.</span></h3>
+        <p class="profile-bio">
+          Estudiante de desarrollo de software con foco en aplicaciones web empresariales: interfaces robustas, código revisable y experiencias accesibles. Me motivan los entornos donde la calidad importa, la documentación se cuida y cada decisión técnica se justifica.
+        </p>
+        <p class="profile-bio profile-bio-hl">
+          Busco mi primera oportunidad profesional como Frontend Developer para aportar desde el primer día y crecer en equipos que valoren la mejora continua. Se escuchar y no paro de Aprender y mejorar.
+        </p>
+
+        <div class="meta-grid">
+          <div class="meta-item">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div>
+              <span class="meta-label">Formación</span>
+              <span class="meta-value">Desarrollo Web - Ilerna</span>
+            </div>
+          </div>
+          <div class="meta-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span class="meta-label">Ubicación</span>
+              <span class="meta-value">España · Valencia</span>
+            </div>
+          </div>
+          <div class="meta-item">
+            <i class="fa-solid fa-language"></i>
+            <div>
+              <span class="meta-label">Idiomas</span>
+              <span class="meta-value">Español · Inglés B1 - Aleman A1</span>
+            </div>
+          </div>
+          <div class="meta-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span class="meta-label">Email</span>
+              <a href="mailto:slainer17@hotmail.com" class="meta-value">slainer17@hotmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a href="#contacto" class="btn-primary">
+            <i class="fa-solid fa-paper-plane"></i> Contactar
+          </a>
+          <a href="#portafolio" class="btn-line">
+            <i class="fa-solid fa-folder-open"></i> Ver proyectos
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS STRIP -->
+    <div class="stats-strip reveal" data-delay="120">
+      <div class="stat-cell">
+        <span class="stat-num" data-target="3">0</span>
+        <span class="stat-label">Proyectos</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" data-target="16">0</span>
+        <span class="stat-label">Tecnologías</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" data-target="3">0</span>
+        <span class="stat-label">Idiomas</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" data-target="1">0</span>
+        <span class="stat-label">Años aprendiendo</span>
+      </div>
+    </div>
+
+    <!-- IDIOMAS -->
+    <div class="block">
+      <div class="block-header reveal">
+        <h3 class="block-title">Idiomas</h3>
+        <p class="block-subtitle">Comunicación clara con equipos y stakeholders internacionales.</p>
+      </div>
+
+      <div class="lang-grid">
+        <div class="lang-card reveal" data-delay="0">
+          <div class="lang-head">
+            <span class="lang-flag" aria-hidden="true">ES</span>
+            <div>
+              <h5>Español</h5>
+              <span class="lang-level">Nativo · C2</span>
+            </div>
+          </div>
+          <div class="lang-bar"><span style="width:100%"></span></div>
+        </div>
+
+        <div class="lang-card reveal" data-delay="120">
+          <div class="lang-head">
+            <span class="lang-flag" aria-hidden="true">EN</span>
+            <div>
+              <h5>Inglés</h5>
+              <span class="lang-level">Intermedio · B1</span>
+            </div>
+          </div>
+          <div class="lang-bar"><span style="width:60%"></span></div>
+        </div>
+
+        <div class="lang-card lang-card-focus reveal" data-delay="240">
+          <div class="lang-head">
+            <span class="lang-flag" aria-hidden="true">DE</span>
+            <div>
+              <h5>Alemán <span class="lang-tag">en activo</span></h5>
+              <span class="lang-level">Básico · A1 · estudiando A2</span>
+            </div>
+          </div>
+          <div class="lang-bar"><span style="width:25%"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STACK TÉCNICO -->
+    <div class="block">
+      <div class="block-header reveal">
+        <h3 class="block-title">Stack técnico</h3>
+        <p class="block-subtitle">Las tecnologías con las que trabajo cada día.</p>
+      </div>
+
+      <div class="stack-grid">
+        <div class="skill-category reveal" data-delay="0">
+          <div class="cat-head">
+            <span class="cat-icon"><i class="fa-solid fa-window-maximize"></i></span>
+            <h4>Frontend</h4>
+          </div>
+          <div class="tech-grid">
+            <span class="tech-pill"><i class="devicon-html5-plain colored"></i> HTML5</span>
+            <span class="tech-pill"><i class="devicon-css3-plain colored"></i> CSS3</span>
+            <span class="tech-pill"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            <span class="tech-pill"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+            <span class="tech-pill"><i class="devicon-vuejs-plain colored"></i> Vue.js</span>
+            <span class="tech-pill"><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal" data-delay="150">
+          <div class="cat-head">
+            <span class="cat-icon"><i class="fa-solid fa-server"></i></span>
+            <h4>Backend</h4>
+          </div>
+          <div class="tech-grid">
+            <span class="tech-pill"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+            <span class="tech-pill"><i class="devicon-express-original" style="color:#ffffff"></i> Express</span>
+            <span class="tech-pill"><i class="fa-solid fa-network-wired" style="color:#4eaaff"></i> REST APIs</span>
+            <span class="tech-pill"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+            <span class="tech-pill"><i class="devicon-redis-plain colored"></i> Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal" data-delay="300">
+          <div class="cat-head">
+            <span class="cat-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <h4>Herramientas</h4>
+          </div>
+          <div class="tech-grid">
+            <span class="tech-pill"><i class="devicon-git-plain colored"></i> Git / GitHub</span>
+            <span class="tech-pill"><i class="devicon-jest-plain colored"></i> Testing</span>
+            <span class="tech-pill"><i class="fa-solid fa-paper-plane" style="color:#ef5b25"></i> Postman</span>
+            <span class="tech-pill"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+            <span class="tech-pill"><i class="fa-solid fa-arrows-rotate" style="color:#3ddc84"></i> Ágil / Scrum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRINCIPIOS DE DESARROLLO -->
+    <div class="block">
+      <div class="block-header reveal">
+        <h3 class="block-title">Principios con los que escribo código</h3>
+        <p class="block-subtitle">No son trends — son la base con la que construyo software pensado para durar.</p>
+      </div>
+
+      <div class="principles-grid">
+        <div class="principle-card reveal" data-delay="0">
+          <span class="principle-num">01</span>
+          <i class="fa-solid fa-feather"></i>
+          <h5>Código limpio</h5>
+          <p>Nombres claros, funciones cortas y una sola responsabilidad por archivo. Si otra persona no lo lee fácil, lo reescribo.</p>
+        </div>
+        <div class="principle-card reveal" data-delay="100">
+          <span class="principle-num">02</span>
+          <i class="fa-solid fa-universal-access"></i>
+          <h5>Accesibilidad</h5>
+          <p>HTML semántico, contraste, foco visible y navegación por teclado. La accesibilidad no es opcional, es parte del producto.</p>
+        </div>
+        <div class="principle-card reveal" data-delay="200">
+          <span class="principle-num">03</span>
+          <i class="fa-solid fa-vial-circle-check"></i>
+          <h5>Testing</h5>
+          <p>Tests donde aporten — pruebas unitarias para lógica crítica, pruebas manuales para flujos de usuario. Confianza al desplegar.</p>
+        </div>
+        <div class="principle-card reveal" data-delay="300">
+          <span class="principle-num">04</span>
+          <i class="fa-solid fa-book"></i>
+          <h5>Documentación</h5>
+          <p>READMEs útiles, comentarios donde el "porqué" no es obvio, y commits con contexto. El equipo siguiente lo agradecerá.</p>
+        </div>
+        <div class="principle-card reveal" data-delay="400">
+          <span class="principle-num">05</span>
+          <i class="fa-solid fa-gauge-high"></i>
+          <h5>Performance</h5>
+          <p>Lazy loading, optimización de imágenes y queries pensadas. Que el usuario no espere lo que no debe.</p>
+        </div>
+        <div class="principle-card reveal" data-delay="500">
+          <span class="principle-num">06</span>
+          <i class="fa-solid fa-globe"></i>
+          <h5>i18n y escalabilidad</h5>
+          <p>Componentes pensados para crecer y para hablar varios idiomas. El producto de hoy puede ser global mañana.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MI ENFOQUE: code snippet pull-quote -->
+    <div class="block philosophy-block reveal">
+      <div class="philosophy-grid">
+        <div class="philosophy-text">
+          <span class="block-eyebrow">Mi enfoque</span>
+          <h3 class="philosophy-title">El código que escribo<br>habla por mí.</h3>
+          <p class="philosophy-desc">
+            Prefiero una función que se entienda al primer intento sobre una "ingeniosa" que requiera explicación. Un buen componente debería decir lo que hace antes de leer su implementación.
+          </p>
+          <ul class="philosophy-list">
+            <li><i class="fa-solid fa-check"></i> Componentes pequeños y reutilizables</li>
+            <li><i class="fa-solid fa-check"></i> Estado predecible, side effects controlados</li>
+            <li><i class="fa-solid fa-check"></i> Tipado fuerte con TypeScript</li>
+            <li><i class="fa-solid fa-check"></i> Reviews abiertos al feedback</li>
           </ul>
-          <img class="kev-dev" src="./img/kevin.dev.png" alt="Kevin Zambrano">
+        </div>
+
+        <div class="code-window">
+          <div class="code-bar">
+            <span class="dot dot-r"></span>
+            <span class="dot dot-y"></span>
+            <span class="dot dot-g"></span>
+            <span class="code-file">UserProfile.vue</span>
+          </div>
+          <pre class="code-body"><code><span class="c-c">// Componente legible &gt; componente clever</span>
+<span class="c-k">const</span> <span class="c-f">getDisplayName</span> = (<span class="c-p">user</span>: <span class="c-t">User</span>): <span class="c-t">string</span> =&gt; {
+  <span class="c-k">if</span> (!user.name?.<span class="c-f">trim</span>()) <span class="c-k">return</span> <span class="c-s">'Usuario sin nombre'</span>;
+  <span class="c-k">return</span> user.name.<span class="c-f">trim</span>();
+};
+
+<span class="c-k">const</span> <span class="c-f">canEditProfile</span> = (
+  <span class="c-p">user</span>: <span class="c-t">User</span>,
+  <span class="c-p">currentUser</span>: <span class="c-t">User</span>
+): <span class="c-t">boolean</span> =&gt; {
+  <span class="c-k">return</span> user.id === currentUser.id
+      || currentUser.role === <span class="c-s">'admin'</span>;
+};</code></pre>
         </div>
       </div>
-
-      <!-- HABILIDADES -->
-<div class="skills card-3d">
-  <h3><i class="fa-solid fa-code"></i> Habilidades</h3>
-  <div class="skills-list">
-    <div class="skill">
-      <span><i class="fa-brands fa-js"></i> JavaScript</span>
-      <div class="progress-bar"><div class="progress js"></div></div>
     </div>
 
-    <div class="skill">
-      <span><i class="fa-brands fa-node"></i> Nodejs - npm</span>
-      <div class="progress-bar"><div class="progress php"></div></div>
+    <!-- TRAYECTORIA -->
+    <div class="block">
+      <div class="block-header reveal">
+        <h3 class="block-title">Trayectoria</h3>
+        <p class="block-subtitle">El camino hasta hoy — y hacia dónde voy.</p>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline-item reveal" data-delay="0">
+          <span class="timeline-dot"></span>
+          <div class="timeline-card">
+            <span class="timeline-date">2026 · Hoy</span>
+            <h5>Frontend Developer · en busca activa</h5>
+            <p>Profundizando en Vue.js, TypeScript, accesibilidad y arquitectura de aplicaciones empresariales. Estudiando alemán para acceder al mercado DACH.</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal" data-delay="100">
+          <span class="timeline-dot"></span>
+          <div class="timeline-card">
+            <span class="timeline-date">2025</span>
+            <h5>Proyectos Full Stack</h5>
+            <p>Construcción de SkechersPlus (Node + Express + MongoDB + Redis) y dashboards en Vue.js. Práctica de REST APIs, caching y patrones de arquitectura.</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal" data-delay="200">
+          <span class="timeline-dot"></span>
+          <div class="timeline-card">
+            <span class="timeline-date">2024 — 2025</span>
+            <h5>Bases sólidas de Frontend</h5>
+            <p>Dominio de HTML5 semántico, CSS3 moderno (Grid, Flexbox), JavaScript ES6+ y Tailwind. Primeros proyectos publicados en GitHub Pages.</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal" data-delay="300">
+          <span class="timeline-dot timeline-dot-start"></span>
+          <div class="timeline-card">
+            <span class="timeline-date">Inicio</span>
+            <h5>Estudios en Sistemas / Desarrollo de Software</h5>
+            <p>Primeros pasos en programación. Aprendizaje autodidacta en paralelo a la formación reglada. Curiosidad como motor.</p>
+          </div>
+        </li>
+      </ol>
     </div>
 
-    <div class="skill">
-      <span><i class="fa-brands fa-vuejs"></i> Vue.js</span>
-      <div class="progress-bar"><div class="progress angular"></div></div>
-    </div>
-
-    <div class="skill">
-      <span><i class="fa-brands fa-js"></i> TypeScript</span>
-      <div class="progress-bar"><div class="progress sql"></div></div>
-    </div>
-
-    <div class="skill">
-      <span><i class="fa-brands fa-git-alt"></i> Git / REST / Testing</span>
-      <div class="progress-bar"><div class="progress git"></div></div>
-    </div>
-  </div>
-</div>
-    </div>
   </div>
 </section>
-<section id="portafolio" class="portfolio fade-in">
+<!-- SECCIÓN PROYECTOS -->
+<section id="portafolio" class="portfolio">
   <div class="container">
-    <div class="portfolio-header">
-      <h2 class="section-title">Proyectos</h2>
-      <p class="section-subtitle">
-        Explora algunos de los proyectos más destacados en los que he trabajado.
-      </p>
+    <div class="section-header reveal">
+      <span class="section-tag">// Mi trabajo</span>
+      <h2 class="section-title">Proyectos seleccionados</h2>
+      <p class="section-subtitle">Cada proyecto resuelve un problema concreto. Aquí muestro decisiones técnicas, no solo capturas — qué se construyó, cómo y por qué.</p>
     </div>
 
-    <!-- Contenedor de carpetas en horizontal -->
-    <div class="folders-grid">
-
-
- <!-- HTML Y CSS -->
-  <div class="folder-card">
-    <div class="folder-header" onclick="toggleFolder(this)">
-      <div class="folder-icon">
-        <i class="fa-solid fa-folder" style="color: #4a90e2;"></i>
-        <i class="fa-brands fa-html5 folder-icon-overlay" style="color: #e34c26;"></i>
+    <!-- CASE STUDY DESTACADO: SkechersPlus -->
+    <article class="case-study reveal" data-category="fullstack" data-delay="0">
+      <div class="case-visual">
+        <div class="case-img">
+          <img src="./img/Captura de pantalla 2025-12-15 141649.png" alt="SkechersPlus E-commerce">
+        </div>
+        <div class="case-glow"></div>
       </div>
-      <div class="folder-info">
-        <span class="folder-name">HTML + CSS</span>
-        <span class="folder-count">2 proyectos</span>
-      </div>
-      <i class="fa-solid fa-chevron-down arrow" style="color: #ffffff;"></i>
-    </div>
-    <div class="projects-wrapper">
-      <div class="projects">
-        <div class="project-card">
-          <div class="project-img-container">      
-            <img class="project-img" src="/img/dashboard.png" alt="Dashboard">
-            <div class="project-overlay">
-              <span class="project-date">Enero 2026</span>
+
+      <div class="case-content">
+        <div class="case-head">
+          <span class="case-pill"><i class="fa-solid fa-star"></i> Caso de estudio destacado</span>
+          <span class="case-date">Dic 2025</span>
+        </div>
+
+        <h3 class="case-title">SkechersPlus</h3>
+        <p class="case-tagline">E-commerce full stack con caché en Redis para tiempos de respuesta sub-100ms.</p>
+
+        <p class="case-desc">
+          Plataforma e-commerce completa: catálogo dinámico, gestión de carrito, control de stock e integración de pagos. Implementé una capa de caché con Redis que redujo significativamente los tiempos de respuesta en consultas frecuentes y aplicación de patrones REST limpios para la API.
+        </p>
+
+        <div class="case-highlights">
+          <div class="case-hl">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <strong>Caché Redis</strong>
+              <span>Respuestas más rápidas en consultas repetidas</span>
             </div>
           </div>
-          <div class="project-content">
-            <h3>Dashboard-IA</h3>
-            <p>Mas Adelante funcional con base de datos.</p>
-            <div class="project-tech">
-              <span>html</span>
-              <span>Css</span>
-              <span>JavaScript</span>
+          <div class="case-hl">
+            <i class="fa-solid fa-cubes"></i>
+            <div>
+              <strong>API REST</strong>
+              <span>Endpoints versionados, validados y documentados</span>
             </div>
-            <a href="https://kssz17.github.io/DashboardPracticeHtmlyCss/" target="_blank" class="btn-glow">Ver proyecto →</a>
+          </div>
+          <div class="case-hl">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div>
+              <strong>Auth + sesiones</strong>
+              <span>Login seguro y manejo de stock concurrente</span>
+            </div>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-img-container">
-            <img class="project-img" src="img/login.png" alt="Login">
-            <div class="project-overlay">
-              <span class="project-date">Mar 2026</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <h3>Login Sencillo</h3>
-            <p>Proximamente en conjunto con BD</p>
-            <div class="project-tech">
-              <span>Html</span>
-              <span>CSS</span>
-            </div>
-            <a href="https://kssz17.github.io/LoginPractice/" target="_blank" class="btn-glow">Ver proyecto →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>  
 
-<!-- Carpeta Vuej -->
-  <div class="folder-card">
-    <div class="folder-header" onclick="toggleFolder(this)">
-      <div class="folder-icon">
-        <i class="fa-solid fa-folder" style="color: #4a90e2;"></i>
-        <i class="fa-brands fa-vuejs folder-icon-overlay" style="color: #42b883;"></i>
-      </div>
-      <div class="folder-info">
-        <span class="folder-name">Vuej</span>
-        <span class="folder-count">1 proyecto</span>
-      </div>
-      <i class="fa-solid fa-chevron-down arrow" style="color: #ffffff;"></i>
-    </div>
-    <div class="projects-wrapper">
-      <div class="projects">
-        <div class="project-card">
-          <div class="project-img-container">
-            <img class="project-img" src="./img/dashboard.png" alt="Spring Boot API">
-            <div class="project-overlay">
-              <span class="project-date">Ene 2021</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <h3>DashBoard Municipalidad</h3>
-            <p>Practicando</p>
-            <div class="project-tech">
-              <span>html</span>
-              <span>JavaScript</span>
-              <span>Tailwind</span>
-               <span>Vuej</span>
-            </div>
-            <a href="https://kssz17.github.io/DashboardMunicipalidad/#/dashboard" target="_blank" class="btn-glow">Ver proyecto →</a>
-          </div>
+        <div class="case-tech">
+          <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Redis</span><span>JavaScript</span>
+        </div>
+
+        <div class="case-actions">
+          <a href="https://skecherplus.infinityfree.me/" target="_blank" rel="noopener" class="btn-primary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver demo en vivo
+          </a>
+          <a href="https://github.com/kssz17" target="_blank" rel="noopener" class="btn-line">
+            <i class="fa-brands fa-github"></i> Código fuente
+          </a>
         </div>
       </div>
+    </article>
+
+    <!-- Filtros -->
+    <div class="filter-wrap reveal" data-delay="100">
+      <h3 class="filter-title"><i class="fa-solid fa-layer-group"></i> Otros proyectos</h3>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="vue">Vue</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="js">JavaScript</button>
+      </div>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Dashboard Municipalidad -->
+      <article class="proj-card reveal" data-category="vue frontend" data-delay="0">
+        <div class="proj-img-wrap">
+          <img src="./img/dashboard.png" alt="Dashboard Municipalidad">
+          <div class="proj-overlay">
+            <div class="proj-overlay-inner">
+              <a href="https://kssz17.github.io/DashboardMunicipalidad/#/dashboard" target="_blank" rel="noopener" class="proj-link" aria-label="Ver demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="https://github.com/kssz17/DashboardMunicipalidad" target="_blank" rel="noopener" class="proj-link" aria-label="Ver código">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="proj-date">2026</span>
+            <span class="proj-type"><i class="fa-solid fa-circle-nodes"></i> Vue · SPA</span>
+          </div>
+          <h3>Dashboard Municipalidad</h3>
+          <p>Panel administrativo con ruteo, gráficos, manejo de estado y vistas dinámicas. Componentes reutilizables y diseño responsive con Tailwind.</p>
+          <ul class="proj-highlights">
+            <li><i class="fa-solid fa-check"></i> Vue Router con rutas anidadas</li>
+            <li><i class="fa-solid fa-check"></i> Componentes reutilizables</li>
+            <li><i class="fa-solid fa-check"></i> Responsive con Tailwind</li>
+          </ul>
+          <div class="proj-tech">
+            <span>Vue.js</span><span>Tailwind</span><span>JavaScript</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="github-cta reveal">
+      <div class="cta-text">
+        <h4><i class="fa-brands fa-github"></i> Más en mi GitHub</h4>
+        <p>Experimentos, prácticas y proyectos en evolución. Commits frecuentes, código abierto al feedback.</p>
+      </div>
+      <a href="https://github.com/kssz17" target="_blank" rel="noopener" class="btn-primary">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver perfil completo
+      </a>
     </div>
   </div>
-
-<!-- Carpeta JavaScript -->
-  <div class="folder-card">
-    <div class="folder-header" onclick="toggleFolder(this)">
-      <div class="folder-icon">
-        <i class="fa-solid fa-folder" style="color: #4a90e2;"></i>
-        <i class="fa-brands fa-js folder-icon-overlay" style="color: #f7df1e;"></i>
-      </div>
-      <div class="folder-info">
-        <span class="folder-name">JavaScript</span>
-        <span class="folder-count">1 proyecto</span>
-      </div>
-      <i class="fa-solid fa-chevron-down arrow" style="color: #ffffff;"></i>
-    </div>
-    <div class="projects-wrapper">
-      <div class="projects">
-        <div class="project-card">
-          <div class="project-img-container">
-            <img class="project-img" src="./img/tareas.png" alt="Spring Boot API">
-            <div class="project-overlay">
-              <span class="project-date">Ene 2021</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <h3>App Tareas KevDev</h3>
-            <p>Programador de tareas.</p>
-            <div class="project-tech">
-              <span>Html</span>
-              <span>JavaScript </span>
-            </div>
-            <a href="https://kssz17.github.io/TareasKevDev/" target="_blank" class="btn-glow">Ver proyecto →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!-- Carpeta Git -->
-  <div class="folder-card">
-    <div class="folder-header" onclick="toggleFolder(this)">
-      <div class="folder-icon">
-        <i class="fa-solid fa-folder" style="color: #4a90e2;"></i>
-        <i class="fa-brands fa-git-alt folder-icon-overlay" style="color: #f05032;"></i>
-      </div>
-      <div class="folder-info">
-        <span class="folder-name">Git</span>
-        <span class="folder-count">2 proyectos</span>
-      </div>
-      <i class="fa-solid fa-chevron-down arrow" style="color: #ffffff;"></i>
-    </div>
-    <div class="projects-wrapper">
-      <div class="projects">
-        <div class="project-card">
-          <div class="project-img-container">
-            <img class="project-img" src="./img/java1.jpg" alt="Spring Boot API">
-            <div class="project-overlay">
-              <span class="project-date">Ene 2021</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <h3>Spring Boot API</h3>
-            <p>API RESTful con microservicios.</p>
-            <div class="project-tech">
-              <span>Spring</span>
-              <span>JPA</span>
-              <span>PostgreSQL</span>
-            </div>
-            <a href="#" target="_blank" class="btn-glow">Ver proyecto →</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-img-container">
-            <img class="project-img" src="./img/java2.jpg" alt="Android App">
-            <div class="project-overlay">
-              <span class="project-date">Mar 2021</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <h3>Android App</h3>
-            <p>Aplicación nativa para Android.</p>
-            <div class="project-tech">
-              <span>Kotlin</span>
-              <span>Room</span>
-              <span>Retrofit</span>
-            </div>
-            <a href="#" target="_blank" class="btn-glow">Ver proyecto →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!-- Carpeta TypeScript -->
-  <div class="folder-card">
-    <div class="folder-header" onclick="toggleFolder(this)">
-      <div class="folder-icon">
-        <i class="fa-solid fa-folder" style="color: #4a90e2;"></i>
-        <i class="fa-brands fa-js folder-icon-overlay" style="color: #3178c6;"></i>
-      </div>
-      <div class="folder-info">
-        <span class="folder-name">TypeScript</span>
-        <span class="folder-count">1 proyecto</span>
-      </div>
-      <i class="fa-solid fa-chevron-down arrow" style="color: #ffffff;"></i>
-    </div>
-    <div class="projects-wrapper">
-      <div class="projects">
-        <div class="project-card featured">
-          <div class="project-img-container">
-            <img class="project-img" src="./img/Captura de pantalla 2025-12-15 141649.png" alt="SkechersPlus">
-            <div class="project-overlay">
-              <span class="project-date">Dec 2025</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <h3>SkechersPlus</h3>
-            <p>Tienda de zapatillas deportivas con arquitectura escalable.</p>
-            <div class="project-tech">
-              <span>Node.js</span>
-              <span>Express</span>
-              <span>MongoDB</span>
-              <span>Redis</span>
-            </div>
-            <a href="https://skecherplus.infinityfree.me/" target="_blank" class="btn-glow">Ver proyecto →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 </section>
 
+<!-- SECCIÓN CONTACTO -->
 <section id="contacto" class="contact">
-  <div class="container4">
-    <h2 class="section-title">Contacto</h2>
-    <p class="section-subtitle">¿Tienes un proyecto o idea? Estoy disponible para colaboraciones o nuevas oportunidades.</p>
+  <div class="contact-container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Hablemos</h2>
+      <p class="section-subtitle">Abierto a oportunidades de prácticas, posiciones junior y proyectos freelance. Suelo responder en menos de 24 horas.</p>
+    </div>
 
-    <div class="contact-links">
-      <a href="mailto:slainer17@hotmail.com" class="btn-glow">Enviar Correo</a>
-      
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/tuusuario" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/tuusuario" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:slainer17@hotmail.com" aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
+    <div class="contact-layout">
+      <!-- Información -->
+      <div class="contact-info reveal">
+        <h3 class="info-heading">Trabajemos juntos</h3>
+        <p class="info-text">
+          Si crees que puedo aportar a tu equipo o tienes una idea que quieres llevar a producción, escríbeme. Estoy listo para sumar y aprender.
+        </p>
+
+        <div class="contact-channels">
+          <a href="mailto:slainer17@hotmail.com" class="channel-card">
+            <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="channel-text">
+              <span class="channel-label">Email</span>
+              <span class="channel-value">slainer17@hotmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/kevin-zambrano-b403a9181/" target="_blank" rel="noopener" class="channel-card">
+            <div class="channel-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="channel-text">
+              <span class="channel-label">LinkedIn</span>
+              <span class="channel-value">/in/kevin-zambrano</span>
+            </div>
+          </a>
+          <a href="https://github.com/kssz17" target="_blank" rel="noopener" class="channel-card">
+            <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="channel-text">
+              <span class="channel-label">GitHub</span>
+              <span class="channel-value">@kssz17</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="availability-card">
+          <span class="pulse-dot"></span>
+          <div>
+            <strong>Disponible para nuevas oportunidades</strong>
+            <small>Tiempo completo · Remoto · Híbrido</small>
+          </div>
+        </div>
       </div>
+
+      <!-- Formulario -->
+      <form class="contact-form reveal" data-delay="200" id="contactForm" action="https://formsubmit.co/slainer17@hotmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo contacto desde el portafolio">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="tu@empresa.com">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="company">Empresa <span class="optional">(opcional)</span></label>
+          <input type="text" id="company" name="company" placeholder="Nombre de tu empresa">
+        </div>
+
+        <div class="form-field">
+          <label for="subject">Asunto</label>
+          <input type="text" id="subject" name="subject" required placeholder="Oportunidad laboral, proyecto, colaboración...">
+        </div>
+
+        <div class="form-field">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Cuéntame en qué puedo ayudarte..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary submit-btn">
+          <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
+        </button>
+        <p class="form-note">Tu información se mantiene privada. Respuesta en menos de 24 horas hábiles.</p>
+      </form>
     </div>
   </div>
 </section>
