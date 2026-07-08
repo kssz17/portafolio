@@ -42,7 +42,7 @@
         <div class="hero-content">
             <h2>¡Hola!</h2>
             <h3>Soy <span>Kevin Zambrano</span></h3>
-            <p id="text">Intentando Desarrollar <span id="role"></span></p>
+            <p id="text">Desarrollando <span id="role"></span></p>
             <button <i class="fa-solid fa-folder-open"></i> <a href="#portafolio">Portafolio</a></button>
         </div>
     </section>
@@ -61,7 +61,7 @@
     <div class="profile-hero reveal">
       <div class="profile-photo">
         <div class="photo-frame">
-          <img src="./img/IMG_20230606_043315.jpg" alt="Kevin Zambrano">
+          <img src="./img/123.jpeg" alt="Kevin Zambrano">
         </div>
         <span class="status-pill">
           <span class="status-dot"></span> Disponible
@@ -234,6 +234,50 @@
           </div>
         </div>
       </div>
+
+      <!--
+        CARRUSEL INFINITO DE TECNOLOGÍAS (marquee)
+        - Se desplaza solo, en bucle continuo, de derecha a izquierda.
+        - El truco: la pista (.marquee-track) contiene DOS grupos idénticos.
+          Al animar solo la mitad (-50%), cuando termina el 1er grupo el 2º
+          está exactamente en su lugar, así que el salto es invisible.
+        - Se pausa al pasar el ratón (ver CSS).
+        - aria-hidden en el 2º grupo: es una copia visual, no la debe leer el lector de pantalla.
+      -->
+      <div class="tech-marquee reveal" data-delay="200">
+        <div class="marquee-track">
+          <!-- Grupo 1 (real) -->
+          <div class="marquee-group">
+            <span class="tech-pill"><i class="devicon-html5-plain colored"></i> HTML5</span>
+            <span class="tech-pill"><i class="devicon-css3-plain colored"></i> CSS3</span>
+            <span class="tech-pill"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            <span class="tech-pill"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+            <span class="tech-pill"><i class="devicon-vuejs-plain colored"></i> Vue.js</span>
+            <span class="tech-pill"><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+            <span class="tech-pill"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+            <span class="tech-pill"><i class="devicon-express-original" style="color:#fff"></i> Express</span>
+            <span class="tech-pill"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+            <span class="tech-pill"><i class="devicon-redis-plain colored"></i> Redis</span>
+            <span class="tech-pill"><i class="devicon-git-plain colored"></i> Git</span>
+            <span class="tech-pill"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+          </div>
+          <!-- Grupo 2 (copia visual para el bucle sin costuras) -->
+          <div class="marquee-group" aria-hidden="true">
+            <span class="tech-pill"><i class="devicon-html5-plain colored"></i> HTML5</span>
+            <span class="tech-pill"><i class="devicon-css3-plain colored"></i> CSS3</span>
+            <span class="tech-pill"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            <span class="tech-pill"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+            <span class="tech-pill"><i class="devicon-vuejs-plain colored"></i> Vue.js</span>
+            <span class="tech-pill"><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+            <span class="tech-pill"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+            <span class="tech-pill"><i class="devicon-express-original" style="color:#fff"></i> Express</span>
+            <span class="tech-pill"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+            <span class="tech-pill"><i class="devicon-redis-plain colored"></i> Redis</span>
+            <span class="tech-pill"><i class="devicon-git-plain colored"></i> Git</span>
+            <span class="tech-pill"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- PRINCIPIOS DE DESARROLLO -->
@@ -378,11 +422,11 @@
       <p class="section-subtitle">Cada proyecto resuelve un problema concreto. Aquí muestro decisiones técnicas, no solo capturas — qué se construyó, cómo y por qué.</p>
     </div>
 
-    <!-- CASE STUDY DESTACADO: SkechersPlus -->
+    <!-- Proyecto 1 Talent company -->
     <article class="case-study reveal" data-category="fullstack" data-delay="0">
       <div class="case-visual">
         <div class="case-img">
-          <img src="./img/Captura de pantalla 2025-12-15 141649.png" alt="SkechersPlus E-commerce">
+          <img src="./img/Captura de pantalla 2026-06-07 231107.png" alt="Talent company C.A">
         </div>
         <div class="case-glow"></div>
       </div>
@@ -393,11 +437,9 @@
           <span class="case-date">Dic 2025</span>
         </div>
 
-        <h3 class="case-title">SkechersPlus</h3>
-        <p class="case-tagline">E-commerce full stack con caché en Redis para tiempos de respuesta sub-100ms.</p>
-
+        <h3 class="case-title">Talent Company C.A</h3>
         <p class="case-desc">
-          Plataforma e-commerce completa: catálogo dinámico, gestión de carrito, control de stock e integración de pagos. Implementé una capa de caché con Redis que redujo significativamente los tiempos de respuesta en consultas frecuentes y aplicación de patrones REST limpios para la API.
+          App interactiva que ofrece la capacidad de crear ofertas y encontrar trabajo desde cualquier parte del mundo.
         </p>
 
         <div class="case-highlights">
@@ -425,67 +467,19 @@
         </div>
 
         <div class="case-tech">
-          <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Redis</span><span>JavaScript</span>
+          <span>Vuej</span><span>JS</span><span>TypeScript</span><span>SupaBase</span><span>Tailwind</span>
         </div>
 
         <div class="case-actions">
-          <a href="https://skecherplus.infinityfree.me/" target="_blank" rel="noopener" class="btn-primary">
+          <a href="https://talent-companykssz.vercel.app/login" target="_blank" rel="noopener" class="btn-primary">
             <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver demo en vivo
           </a>
-          <a href="https://github.com/kssz17" target="_blank" rel="noopener" class="btn-line">
+          <a href="https://github.com/kssz17/Talent-Company-C.A" target="_blank" rel="noopener" class="btn-line">
             <i class="fa-brands fa-github"></i> Código fuente
           </a>
         </div>
       </div>
     </article>
-
-    <!-- Filtros -->
-    <div class="filter-wrap reveal" data-delay="100">
-      <h3 class="filter-title"><i class="fa-solid fa-layer-group"></i> Otros proyectos</h3>
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="vue">Vue</button>
-        <button class="filter-btn" data-filter="frontend">Frontend</button>
-        <button class="filter-btn" data-filter="js">JavaScript</button>
-      </div>
-    </div>
-
-    <div class="projects-grid">
-
-      <!-- Dashboard Municipalidad -->
-      <article class="proj-card reveal" data-category="vue frontend" data-delay="0">
-        <div class="proj-img-wrap">
-          <img src="./img/dashboard.png" alt="Dashboard Municipalidad">
-          <div class="proj-overlay">
-            <div class="proj-overlay-inner">
-              <a href="https://kssz17.github.io/DashboardMunicipalidad/#/dashboard" target="_blank" rel="noopener" class="proj-link" aria-label="Ver demo">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-              <a href="https://github.com/kssz17/DashboardMunicipalidad" target="_blank" rel="noopener" class="proj-link" aria-label="Ver código">
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-meta">
-            <span class="proj-date">2026</span>
-            <span class="proj-type"><i class="fa-solid fa-circle-nodes"></i> Vue · SPA</span>
-          </div>
-          <h3>Dashboard Municipalidad</h3>
-          <p>Panel administrativo con ruteo, gráficos, manejo de estado y vistas dinámicas. Componentes reutilizables y diseño responsive con Tailwind.</p>
-          <ul class="proj-highlights">
-            <li><i class="fa-solid fa-check"></i> Vue Router con rutas anidadas</li>
-            <li><i class="fa-solid fa-check"></i> Componentes reutilizables</li>
-            <li><i class="fa-solid fa-check"></i> Responsive con Tailwind</li>
-          </ul>
-          <div class="proj-tech">
-            <span>Vue.js</span><span>Tailwind</span><span>JavaScript</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
 
     <div class="github-cta reveal">
       <div class="cta-text">
