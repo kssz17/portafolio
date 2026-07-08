@@ -27,6 +27,15 @@
 
 html {
   scroll-behavior: smooth;
+  /* La navbar es fixed (~80px). scroll-padding hace que al pulsar un enlace
+     del menú la sección se detenga DEBAJO de la navbar y el título no quede
+     tapado ("cortado a medias"). */
+  scroll-padding-top: 96px;
+}
+
+/* Refuerzo por sección: mismo objetivo que scroll-padding pero por elemento. */
+section[id] {
+  scroll-margin-top: 96px;
 }
 
 body {
@@ -782,29 +791,67 @@ a.meta-value:hover {
 /* ============================================ */
 
 /* --- Profile Hero (foto + bio + meta + CTAs) --- */
+/* Hero personal como TARJETA contenida: todo el bloque se lee como una
+   unidad ordenada (nada "flotando" ni cortado). align-items:center reparte
+   el alto entre foto y texto, así no queda hueco muerto bajo la foto. */
 .profile-hero {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 3.5rem;
-  align-items: start;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: center;
   margin: 0 0 4rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  padding: 2.8rem;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+/* Línea de acento dorada en el borde superior de la tarjeta. */
+.profile-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient);
+  opacity: 0.5;
+}
+
+/* Resplandor sutil detrás de la foto para dar profundidad. */
+.profile-hero::after {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -8%;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(255, 187, 0, 0.10) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .profile-photo {
-  position: sticky;
-  top: 110px;
+  position: relative;
+  z-index: 1;
   text-align: center;
 }
 
+/* Retrato profesional: llena la columna con formato vertical (4/5),
+   ideal para foto de traje. Marco con borde en degradado. */
 .photo-frame {
-  width: 240px;
-  height: 240px;
-  border-radius: 24px;
-  background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  height: auto;
+  border-radius: 22px;
+  background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
     var(--gradient) border-box;
   border: 2px solid transparent;
   padding: 5px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.1rem;
   position: relative;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5),
     0 0 0 1px rgba(255, 187, 0, 0.05);
@@ -843,6 +890,8 @@ a.meta-value:hover {
 
 .profile-content {
   min-width: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .profile-eyebrow {
@@ -1416,15 +1465,17 @@ a.meta-value:hover {
 @media (max-width: 960px) {
   .profile-hero {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
     text-align: center;
+    padding: 2rem 1.5rem;
   }
   .profile-photo {
     position: static;
   }
   .photo-frame {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: auto;
+    aspect-ratio: 4 / 5;
   }
   .profile-content .profile-bio,
   .profile-content .profile-bio-hl {
@@ -1813,6 +1864,19 @@ a.meta-value:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 1.8rem;
+}
+
+/* Variante para cuando solo hay UN proyecto: en lugar de estirarse a todo
+   el ancho, la tarjeta se muestra compacta y centrada. Al añadir más
+   proyectos, basta con quitar "projects-grid--single" del HTML. */
+.projects-grid--single {
+  display: flex;
+  justify-content: center;
+}
+
+.projects-grid--single .proj-card {
+  width: 100%;
+  max-width: 420px;
 }
 
 .proj-card {
@@ -2440,5 +2504,82 @@ a.meta-value:hover {
 
   .hero p {
     font-size: 1.4rem;
+  }
+}
+
+/* ============================================================
+   CARRUSEL INFINITO DE TECNOLOGÍAS (marquee)
+   ============================================================ */
+
+/* Contenedor: recorta lo que se sale (overflow hidden) y aplica
+   un degradado en los bordes para que las pills "aparezcan/desaparezcan"
+   suavemente en vez de cortarse de golpe. */
+.tech-marquee {
+  position: relative;
+  margin-top: 2rem;
+  overflow: hidden;
+  /* mask = difuminado en los extremos izq/der. El navegador oculta
+     lo que quede en las zonas transparentes de esta máscara. */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+}
+
+/* La pista contiene los 2 grupos en fila. Su ancho es 2x el contenido.
+   Animamos su posición horizontal de 0 a -50% (justo un grupo entero). */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+}
+
+/* Cada grupo es una fila de pills con separación. flex-shrink:0 evita
+   que se compriman y descuadren el cálculo del -50%. */
+.marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-right: 0.75rem; /* mismo gap entre el último de un grupo y el primero del siguiente */
+  flex-shrink: 0;
+}
+
+/* En el carrusel las pills no deben partirse en varias líneas. */
+.tech-marquee .tech-pill {
+  white-space: nowrap;
+}
+
+/* Pausar al pasar el ratón: invita a "leer" una tecnología concreta. */
+.tech-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* El corazón del efecto: desplazar exactamente medio track (un grupo).
+   Como el 2º grupo es idéntico y queda donde estaba el 1º, el reinicio
+   es imperceptible y parece un bucle infinito. */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Accesibilidad: si el usuario pidió menos movimiento en su sistema,
+   detenemos la animación. Buena práctica y suma en tu apartado a11y. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
   }
 }
