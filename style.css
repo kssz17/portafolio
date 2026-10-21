@@ -2583,3 +2583,63 @@ a.meta-value:hover {
     animation: none;
   }
 }
+
+/* ============================================================
+   TARJETAS PLACEHOLDER DE PROYECTOS ("Próximamente")
+   Marcan el hueco de los 3 proyectos backend que vas a subir.
+   Para publicar uno, sustituye su .proj-placeholder por una
+   tarjeta de proyecto real.
+   ============================================================ */
+.proj-placeholder {
+  padding: 2.2rem 1.5rem;
+  text-align: center;
+  align-items: center;
+  border-style: dashed;
+}
+
+.placeholder-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.1rem;
+  background: var(--gradient-soft);
+  border: 1px solid var(--border-accent);
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+.placeholder-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(255, 187, 0, 0.08);
+  border: 1px solid var(--border-accent);
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  margin-bottom: 0.9rem;
+}
+
+.proj-placeholder h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.proj-placeholder p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 1.1rem;
+}
+
+.proj-placeholder .proj-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+}

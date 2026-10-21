@@ -1,4 +1,4 @@
-const roles = ["Webs", " Apps Escritorios", "APIs"];
+const roles = ["APIs REST", " Microservicios", " Backend con Java"];
 const roleElement = document.getElementById("role");
 
 let roleIndex = 0;
