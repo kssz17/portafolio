@@ -2643,3 +2643,14 @@ a.meta-value:hover {
   gap: 0.4rem;
   justify-content: center;
 }
+
+/* Código en línea dentro de las tarjetas de proyecto */
+.proj-highlights code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8em;
+  color: var(--accent-soft);
+  background: rgba(255, 187, 0, 0.08);
+  border: 1px solid var(--border-accent);
+  padding: 0.05rem 0.35rem;
+  border-radius: 5px;
+}
