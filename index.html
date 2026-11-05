@@ -489,12 +489,34 @@
         </div>
       </article>
 
-      <article class="proj-card proj-placeholder reveal" data-delay="300">
-        <div class="placeholder-icon"><i class="fa-solid fa-diagram-project"></i></div>
-        <span class="placeholder-badge">Próximamente</span>
-        <h3>Microservicios</h3>
-        <p>Sistema desacoplado en servicios independientes, comunicados por API y contenedores.</p>
-        <div class="proj-tech"><span>Spring Boot</span><span>Docker</span><span>REST</span></div>
+      <article class="proj-card reveal" data-delay="300">
+        <div class="proj-img-wrap">
+          <img src="img/originacion-creditos.jpg" alt="Dashboard del analista con embudo de solicitudes, mora y desembolsos por mes" loading="lazy">
+          <div class="proj-overlay">
+            <div class="proj-overlay-inner">
+              <a href="https://github.com/kssz17/originacion-creditos" target="_blank" rel="noopener" class="proj-link" aria-label="Ver código en GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="proj-date">2026</span>
+            <span class="proj-type"><i class="fa-solid fa-diagram-project"></i> Banca · Microservicios</span>
+          </div>
+          <h3>Originación de Créditos</h3>
+          <p>Plataforma de microservicios que gestiona un crédito de principio a fin: solicitud, scoring, revisión del analista, desembolso, pago de cuotas y liquidación, con API Gateway y una base de datos por servicio.</p>
+          <ul class="proj-highlights">
+            <li><i class="fa-solid fa-check"></i> <span>Idempotencia y bloqueo pesimista: un pago simultáneo no cobra dos veces la misma cuota</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Auditoría inmutable y segregación de funciones: quien aprueba no desembolsa</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Circuit breaker y reintentos: si un servicio cae, la solicitud no se pierde</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Pruebas con PostgreSQL real, prueba E2E y CI en GitHub Actions</span></li>
+          </ul>
+          <div class="proj-tech"><span>Java 21</span><span>Spring Boot 4</span><span>Spring Cloud Gateway</span><span>PostgreSQL</span><span>Resilience4j</span><span>Docker</span><span>Angular</span><span>Testcontainers</span></div>
+          <div class="proj-actions">
+            <a href="https://github.com/kssz17/originacion-creditos" target="_blank" rel="noopener" class="btn-outline"><i class="fa-brands fa-github"></i> Ver código</a>
+            <a href="https://github.com/kssz17/originacion-creditos#readme" target="_blank" rel="noopener" class="btn-ghost"><i class="fa-solid fa-book-open"></i> Decisiones técnicas</a>
+          </div>
+        </div>
       </article>
 
     </div>
